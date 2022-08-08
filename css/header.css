@@ -10,13 +10,13 @@ header a{
   color: #fff;
 }
 header .inner {
-  /*! height: 100px; */
+  height: 100px;
   padding-top: 20px;
   align-items: flex-end;
   width: 95%;
 }
 header .inner h1 {
-  position: absolute;
+  /*! position: absolute; */
   /*! top: 0; */
   /*! left: calc(50% - 150px); */
   /*! width: 300px; */

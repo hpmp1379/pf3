@@ -26,6 +26,7 @@ main section#service .inner hgroup {
 }
 main section#service .inner hgroup h2.h5 {
   color: #999;
+  letter-spacing: 1px;
 }
 main section#service .inner hgroup h3.h2 {
   line-height: 2;
@@ -129,10 +130,10 @@ main section#service .inner .contents .more::after{
   padding: 250px 0 100px;
   margin-top: 150px;
 }
-#space .inner, #power .inner, #contact .inner{
-  /*! height: 600px; */
+#space .inner, #power .inner{
+  height: 600px;
   padding-left: 10%;
-  /*! width: 90%; */
+  width: 90%;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -140,7 +141,7 @@ main section#service .inner .contents .more::after{
   background-image: url("../img/mains01.jpg");
 }
 #space .inner h2, #power .inner h2, #contact .inner h2{
-  font-size: 187px;
+  font-size: 186px;
   position: absolute;
   left: 0;
   width: 100%;
@@ -407,12 +408,17 @@ main section#service .inner .contents .more::after{
   bottom: 0;
   background-color: #878762;
 }
-#contact .inner{position: relative;}
+#contact .inner{
+  position: relative;
+  padding-left: 10%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 #contact .inner::before{
   content:"";
   display: block;
   width: 700px;
-  /*! height: 800px; */
+height: 800px;
   /*! background-color: red; */
   position: absolute;
   top: calc(50% - 350px);
@@ -527,7 +533,7 @@ aside{
 }
 aside ul{
   position: absolute;
-  right: 40px;
+  right: 20px;
   bottom: 30px;
 }
 aside ul li{}
@@ -541,10 +547,14 @@ aside ul li a{
   font-weight: 800;
   font-size: 12px;
   margin-top: 10px;
+  transition: all 0.3s;
 }
 aside ul li a.shop{
   color: white;
   background-color: black;
+}
+aside ul li a:hover{
+  box-shadow: 0 0 20px white;
 }
 aside ul li a.kakao{
   color: black;
