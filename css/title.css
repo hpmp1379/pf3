@@ -1,8 +1,11 @@
 #title {
   height: 100%;
-  background-color: #eee;
   min-height: 480px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #eee;
 }
 #title::before{
   content:"";
@@ -23,10 +26,11 @@
 } */
 #title .inner {
   width: 80%;
-  height: 100%;
+  /*! height: 100%; */
   position: relative;
   z-index: 1;
   color: #fff;
+  height: 673px;
 }
 #title .inner h2.h2 {
   position: relative;
@@ -34,7 +38,6 @@
   font-size: 65px;
   margin-bottom: 20px;
   overflow: hidden;
-/*   animation-delay: 1s; */
 }
 #title .inner h2 span{
   display: block;
@@ -66,14 +69,14 @@
   animation-duration: 1.3s;
   animation-fill-mode: forwards;
   animation-direction: reverse;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-out;
 }
 @keyframes pup{
   0%{
     transform: translateY(0%);
     opacity: 1;
   }
-  10%{
+  50%{
     transform: translateY(100%);
   }
   100%{
@@ -83,8 +86,18 @@
 }
 #title .inner p.p span.br {
 }
+#title .inner a{
+  color: white;
+  margin-top: 40px;
+}
+#title .inner a::before{
+  background-color:white;
+}
+#title .inner a::after{
+  border-color: white;
+}
 #title .inner iframe{
-  width: 1200px;
+  width: 1188px;
   height: 670px;
   position: absolute;
   bottom: 0;
@@ -101,11 +114,10 @@
   align-items: center;
   height: 500px;
   justify-content: space-between;
-  width: 164px;
 }
 #title span.titleaside a.campaign{
   transform: rotate(90deg) translateX(80px);
-  font-weight: 700;
+  font-weight: 800;
 }
 #title span.titleaside a.scroll{
   position: relative;
@@ -117,7 +129,7 @@
   display: block;
   width: 15px;
   height: 15px;
-  border: 1px solid black;
+  border: 3px solid black;
   border-left: transparent;
   border-top: transparent;
   transform: scale(0.5) translateY(-15px) rotate(45deg);
@@ -129,7 +141,7 @@
   color: #333;
   position: absolute;
   top: -20px;
-  left: 18.017px;
+  left: calc(50% - 7.5px);
   opacity: 0;
 }
 #title span.titleaside a.scroll::after{
@@ -137,7 +149,7 @@
   display: block;
   width: 15px;
   height: 15px;
-  border: 1px solid black;
+  border: 3px solid black;
   border-left: transparent;
   border-top: transparent;
   transform: scale(0.5) translateY(-15px) rotate(45deg);

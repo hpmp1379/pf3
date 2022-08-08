@@ -2,17 +2,21 @@ header {
   position: fixed;
   z-index: 2;
   width: 100%;
+  position: relative;
+  transform: translateY(120px);
+  margin-top: -120px;
 }
 header a{
   color: #fff;
 }
 header .inner {
-  height: 100px;
-  padding-top: 60px;
+  /*! height: 100px; */
+  padding-top: 20px;
   align-items: flex-end;
+  width: 95%;
 }
 header .inner h1 {
-  /*! position: absolute; */
+  position: absolute;
   /*! top: 0; */
   /*! left: calc(50% - 150px); */
   /*! width: 300px; */
@@ -25,17 +29,20 @@ header .inner h1 a {
   flex-direction: column;
   align-items: center;
   font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 header .inner h1 a img{
   display: block;
   transform: translateY(-12px);
   filter: brightness(100);
+  width: auto;
 }
 header .inner .wgnb{
   order: 1;
 }
 header .inner .wgnb a.ham {
-  
   font-size: 0;
   width: 36px;
   height: 36px;
