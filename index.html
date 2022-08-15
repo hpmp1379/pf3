@@ -20,8 +20,66 @@
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/ham.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+            function(){
+                let n=0; //변수 let에 0을 적용 (변수선언과 초기화)
+                let winH=$(window).height();
+                let winW=$(window).width();
+                $("header .inner .wgnb a.ham").click(function(){
+                    // $(this).addClass("hamRotate");
+                    if(n==0){
+                        console.log(n);
+                        $("div.menuback").remove();
+                        $("#top").prepend("<div class='menuback'></div>");
+                        $(".menuback").css({"height":winH});
+                        n=1;
+                        console.log("클릭이후의 n값:"+n);
+                    }else{
+                        console.log(n);
+                        
+                        $(".wrapgnb ul.gnb > li h2 a,.wrapgnb ul.gnb > li ul li a").toggleClass("translateY");
+                        setTimeout(function(){
+                            $(".menuback").addClass("menubackmove");
+                        })
+                        n=0;
+                        console.log("2번째 클릭이후의 n값:"+n);
+                    }
+
+                    // 햄버거클릭시
+                    $(".wrapgnb").remove();
+                    $(".menuback").append("<div class='wrapgnb'></div>");
+                    $("#top .gnb").appendTo(".wrapgnb").show(500, function(){
+                        $(".wrapgnb ul.gnb > li h2 a,.wrapgnb ul.gnb > li ul li a").toggleClass("translateY");
+                    });
+                    $(".wrapgnb .gnb").clone().appendTo(".wgnb");
+                    $(".wrapgnb").css({"height":winH,"width":winW});
+
+                    //GNB 하단 copyright & sns icon
+                    $(".menuback").append("<p class='copyright'>© 2020 URBAN LAUNDERETTE. ALL RIGHTS RESERVED. Designed by <a href='#' target='_blank'> STUDIO-JT</a>.</p>");
+                    $("footer div.inner .right ul.sns").clone().appendTo(".menuback");
+                    $(".menuback .copyright").wrapInner("<span></span>");
+                    $(".menuback .copyright, .menuback .sns").wrapAll("<div class='wrapsns'></div>");
+                    $(".wrapsns").css({"width":winW,"padding-left":winW*0.15,"padding-right":winW*0.15});
+                    // --show/hide
+                    // $(".wrapsns>*>*").toggleClass("translateY");
+                    setTimeout(function(){
+                        $(".wrapsns>*>*").toggleClass("translateY");
+                        },1000);
+
+                    // $(".menuback .copyright, .menuback .sns").slideToggle();
+
+                return false;
+
+                })
+            }
+        )
+    </script>
+    
 </head>
 <body>
     <!-- 상단영역 -->
