@@ -25,11 +25,14 @@
     <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
+
         $(document).ready(
             function(){
+                //console.log($(window).height());
                 let n=0; //변수 let에 0을 적용 (변수선언과 초기화)
                 let winH=$(window).height();
                 let winW=$(window).width();
+                console.log("초기윈도우너비:" + winW + "/ 초기윈도우 높이:" + winH);
                 $("header .inner .wgnb a.ham").click(function(){
                     // $(this).addClass("hamRotate");
                     if(n==0){
@@ -76,6 +79,27 @@
                 return false;
 
                 })
+                
+                //창사이즈 조절 resize
+                //resize이벤트 : 윈도우창사이즈를 조절할때 발생하는 이벤트
+                $(window).resize(function(){ 
+                    winH=$(window).height();
+                    winW=$(window).width();
+                    $(".wrapgnb").css({"height":winH,"width":winW});
+                    $(".menuback").css({"height":winH});
+                    $(".wrapsns").css({"width":winW,"padding-left":winW*0.15,"padding-right":winW*0.15});
+                    console.log("윈도우너비:" + winW + "/ 윈도우 높이:" + winH);
+                })
+                
+                //$(window).on("이벤트명",function(){});
+                $(window).on("resize",function(){
+                    winW=$(window).width();
+                    winH=$(window).height();
+                    $(".menuback").css({"height":winH});
+                    $(".wrapgnb").css({"height":winH,"width":winW});
+                    $(".wrapsns").css({"width":winW,"padding-left":winW*0.15,"padding-right":winW*0.15});
+                    console.log("윈도우너비:" + winW + "/ 윈도우 높이:" + winH);
+                });
             }
         )
     </script>
