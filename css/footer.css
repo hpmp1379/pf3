@@ -38,6 +38,7 @@ footer div.inner .left .tel p.phone strong {
 footer div.inner .left .tel p:not(.phone) {
   word-spacing: 2px;
   font-size: 16px;
+  font-weight: 300;
 }
 footer div.inner .left .tel p:not(.phone) strong{
   font-weight: 700;
@@ -46,6 +47,8 @@ footer div.inner .left address {
   margin-bottom: 100px;
   margin-top: 60px;
   color: #999;
+  font-size: 14px;
+  letter-spacing: -1px;
 }
 footer div.inner .left address span {
   display: none;
@@ -112,6 +115,7 @@ footer div.inner .right ul.sns li:nth-child(3) a {
 }
 footer div.inner .right > a.email {
   color: #999;
+  font-size: 14px;
 }
 footer div.inner .right > a.email:hover {
   border-bottom: 1px solid #999;

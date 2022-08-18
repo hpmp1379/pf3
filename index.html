@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <script type="text/javascript">
-
         $(document).ready(
             function(){
                 //console.log($(window).height());
@@ -103,7 +103,26 @@
             }
         )
     </script>
-    
+
+    <!-- Slick CSS & JS -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="css/modify.css">
+    <script type="text/javascript">
+        $(document).ready(
+          function(){
+            $('.wslide').slick({
+              dots: true,
+              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll:1,
+              vertical : true
+            });
+          }
+        );
+    </script>
+
 </head>
 <body>
     <!-- 상단영역 -->
@@ -163,17 +182,64 @@
 
     <!-- 타이틀 영역 -->
     <div id="title">
-        <div class="inner flex flexCenter flexColumn">
-            <h2 class="h2"><span>SUSTAINABLE LIFE STYLE</span></h2>
-            <p class="p">
-                <span>
-                지속가능한 미래를 위한<i class="br"></i>
-                새로운 라이프스타일 어반런드렛
-                </span>
-            </p>
-            <a href="#" class="more">view more<span class="pentagon"></span></a>
-            <iframe class="video" src="https://player.vimeo.com/video/626348459?muted=1&autoplay=1&autopause=0&loop=1&background=1" frameborder="0"></iframe>
+        <div class="wslide inner">
+            <div class="slide1 inner flex flexCenter flexColumn">
+                <h2 class="h2"><span>SUSTAINABLE LIFE STYLE</span></h2>
+                <p class="p">
+                    <span>
+                    지속가능한 미래를 위한<i class="br"></i>
+                    새로운 라이프스타일 어반런드렛
+                    </span>
+                </p>
+                <a href="#" class="more">view more<span class="pentagon"></span></a>
+                <iframe class="video" src="https://player.vimeo.com/video/626348459?muted=1&autoplay=1&autopause=0&loop=1&background=1" frameborder="0"></iframe>
+            </div>
+            <div class="slide2 inner flex flexCenter flexColumn">
+                <h2 class="h2"><span>SUSTAINABLE LIFE STYLE</span></h2>
+                <p class="p">
+                    <span>
+                    지속가능한 미래를 위한<i class="br"></i>
+                    새로운 라이프스타일 어반런드렛
+                    </span>
+                </p>
+                <a href="#" class="more">view more<span class="pentagon"></span></a>
+                <iframe class="video" src="https://player.vimeo.com/video/626348459?muted=1&autoplay=1&autopause=0&loop=1&background=1" frameborder="0"></iframe>
+            </div>
+            <div class="slide3 inner flex flexCenter flexColumn">
+                <h2 class="h2"><span>SUSTAINABLE LIFE STYLE</span></h2>
+                <p class="p">
+                    <span>
+                    지속가능한 미래를 위한<i class="br"></i>
+                    새로운 라이프스타일 어반런드렛
+                    </span>
+                </p>
+                <a href="#" class="more">view more<span class="pentagon"></span></a>
+                <iframe class="video" src="https://player.vimeo.com/video/626348459?muted=1&autoplay=1&autopause=0&loop=1&background=1" frameborder="0"></iframe>
+            </div>
+            <div class="slide4 inner flex flexCenter flexColumn">
+                <h2 class="h2"><span>SUSTAINABLE LIFE STYLE</span></h2>
+                <p class="p">
+                    <span>
+                    지속가능한 미래를 위한<i class="br"></i>
+                    새로운 라이프스타일 어반런드렛
+                    </span>
+                </p>
+                <a href="#" class="more">view more<span class="pentagon"></span></a>
+                <iframe class="video" src="https://player.vimeo.com/video/626348459?muted=1&autoplay=1&autopause=0&loop=1&background=1" frameborder="0"></iframe>
+            </div>
+            <div class="slide5 inner flex flexCenter flexColumn">
+                <h2 class="h2"><span>SUSTAINABLE LIFE STYLE</span></h2>
+                <p class="p">
+                    <span>
+                    지속가능한 미래를 위한<i class="br"></i>
+                    새로운 라이프스타일 어반런드렛
+                    </span>
+                </p>
+                <a href="#" class="more">view more<span class="pentagon"></span></a>
+                <iframe class="video" src="https://player.vimeo.com/video/626348459?muted=1&autoplay=1&autopause=0&loop=1&background=1" frameborder="0"></iframe>
+            </div>
         </div>
+        
         <span class="titleaside">
             <a href="#" class="campaign">KEEP CLEAN & GREEN</a>
             <a href="#" class="scroll">SCROLL</a>
@@ -311,13 +377,14 @@
             <div class="inner padding100 flex flexColumn flexCenter">
                 <h2 class="h2">
                     <small class="h5">REGISTER</small><br />
-                    CONTACT<br /><br />
+                    CONTACT<br />
                     FOR MORE<br />
                     INFORMATION
                 </h2>
                 <p class="p">
                     어반런드렛에 대해 궁금하신가요?<br />
-                    입력하신 정보를 바탕으로,<br />
+                    입력하신 정보를 바탕으로,
+                    <span class="br"></span>
                     궁금하신 상담을 도와드립니다.
                 </p>
                 <a href="#" class="more">view more<span class="pentagon"></span></a>

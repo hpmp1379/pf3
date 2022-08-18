@@ -32,6 +32,16 @@
   color: #fff;
   height: 673px;
 }
+#title .wslide{
+  width: 80%;
+  z-index: 1;
+  height: 673px;
+  margin-bottom: 0;
+}
+
+#title .wslide .inner{
+  display: flex;
+}
 #title .inner h2.h2 {
   position: relative;
   z-index: 1;
